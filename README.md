@@ -3,6 +3,8 @@
 
 to run,  use the maven command spring-boot:run
 
+The services are under localhost:8083.
+
 The project is designed as a RESTful application. There are 3 rest endpoints:
 
 -	addcard : POST endpoint, expects a json input of the type 
@@ -22,7 +24,7 @@ Enables the insertion of an entry in the session scoped repository
 }
 
 
-The root url (http://localhost:8080) points to a simple index page with a form with no current functionality.
+The root url (http://localhost:8083) points to a simple index page with a form with no current functionality.
 
 This was done in the span of mostly a day. What is missing:
 
