@@ -1,5 +1,8 @@
 # legalzoom
 
+
+to run,  use the maven command spring-boot:run
+
 The project is designed as a RESTful application. There are 3 rest endpoints:
 
 -	addcard : POST endpoint, expects a json input of the type 
