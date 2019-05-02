@@ -2,18 +2,18 @@
 
 The project is designed as a RESTful application. There are 3 rest endpoints:
 
--	addbank : POST endpoint, expects a json input of the type 
+-	addcard : POST endpoint, expects a json input of the type 
 {
-“name”:”bankA”, 
+“name”:”name”, 
 “cardnumber”:”4242424242424242”, 
 “expirationdate”:”MMM-yyyy”
 }
 Enables the insertion of an entry in the session scoped repository
--	addbanks: POST endpoint, expects a CSV file. It’s objective was to enable the insertion of a list  entries in the session scoped repository. However , currently that’s not the case. 
+-	addcards: POST endpoint, expects a CSV file. It’s objective was to enable the insertion of a list  entries in the session scoped repository. However , currently that’s not the case. 
 
--	getbanks : GET endpoint, returns the entries inserted from the user during his session. The result is sent back as a json list (ordered in descending date order) of elements of the type:
+-	getcards : GET endpoint, returns the entries inserted from the user during his session. The result is sent back as a json list (ordered in descending date order) of elements of the type:
 {
-“name”:”bankA”, 
+“name”:”name”, 
 “censoredcardnumber”:”************4242”, 
 “expirationdate”:”MMM-yyyy”
 }
@@ -26,7 +26,7 @@ This was done in the span of mostly a day. What is missing:
 -	A front-end interface. The plan was to
 o	Implement the requests for single entry and csv insertions.
 o	Implement a validation control for single entry insertion, using bootstrap.
-o	On positive response from the insertion services, fetch the entries by implementing the third endpoing(getbanks)
+o	On positive response from the insertion services, fetch the entries by implementing the third endpoing(getcards)
 
 
 -	CSV to java object conversion. I had no prior experience in the development of endpoints accepting CSV files, and it was my major time sink. I decided to use openCSV, and had 2 options: 
@@ -41,7 +41,7 @@ In hindsight:
   o	Going with the second method, I had to work with another argument I wasn’t very informed on, that is HttpMessageConverter. This represented another time sink.
 
 
--	Back-end validation. At a certain level is present. When a bank object field is set, it is also validated. Null or empty fields are not permitted and result in an exception. The card number and the censored version have to pass a regex test. The date is automatically validated by spring.  That said, with more time I would have handled better the exception system, linking the exception to a response code and a proper json response, probably using @ControllerAdvice.
+-	Back-end validation. At a certain level is present. When a card object field is set, it is also validated. Null or empty fields are not permitted and result in an exception. The card number and the censored version have to pass a regex test. The date is automatically validated by spring.  That said, with more time I would have handled better the exception system, linking the exception to a response code and a proper json response, probably using @ControllerAdvice.
 
 
 
