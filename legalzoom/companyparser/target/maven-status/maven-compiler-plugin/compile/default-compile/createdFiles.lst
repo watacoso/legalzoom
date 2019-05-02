@@ -1,0 +1,12 @@
+com\legalzoom\ui\service\CardTransformationServiceImpl.class
+com\legalzoom\ui\model\card\CardList.class
+com\legalzoom\ui\service\CardTransformationService.class
+com\legalzoom\ui\dao\CardArrayBasedDAO.class
+com\legalzoom\ui\dto\cardDTO.class
+com\legalzoom\ui\util\ListParam.class
+com\legalzoom\ui\model\card\Card.class
+com\legalzoom\ui\config\WebApplicationStarter.class
+com\legalzoom\ui\dto\cardDTO$Status.class
+com\legalzoom\ui\controller\CardController.class
+com\legalzoom\ui\util\CsvHttpMessageConverter.class
+com\legalzoom\ui\dao\CardDAO.class
